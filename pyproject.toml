@@ -1,0 +1,42 @@
+[project]
+name = "coupon-discount-api"
+version = "1.0.0"
+description = "Rules-as-data coupon discount engine with a per-coupon and per-line audit trail"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.27",
+    "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "httpx>=0.27",
+    "ruff>=0.5",
+    "mypy>=1.10",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "SIM"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["app"]
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+
+[tool.coverage.report]
+exclude_lines = ["pragma: no cover", "raise ValueError"]

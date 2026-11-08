@@ -1,0 +1,10 @@
+{
+  "lines": [
+    {"product_code": "B1", "category": "BOOK", "unit_price": 3000, "quantity": 2},
+    {"product_code": "A1", "category": "APPAREL", "unit_price": 5000, "quantity": 1},
+    {"product_code": "GIFT-BOX", "category": "GIFT", "unit_price": 1500, "quantity": 2},
+    {"product_code": "H1", "category": "HOME", "unit_price": 4000, "quantity": 2}
+  ],
+  "coupon_codes": ["OFF500", "OFF1000", "SAVE20", "SAVE10"],
+  "shipping_fee": 550
+}
